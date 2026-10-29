@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>[PHISHING POC] Log In To Your HCode Admin Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <main class="card card--login">
+      <div class="stamp">[PHISHING POC]</div>
+
+      <p class="eyebrow">HCode Admin</p>
+      <h1 class="login-heading">Log into your HCode Admin account</h1>
+
+      <p class="notice">
+        Proof-of-concept only. This form does not store, log, or transmit
+        anything you type. Demo credentials are
+        <code>{{ demo_username }}</code> / <code>{{ demo_password }}</code>.
+      </p>
+
+      {% if message %}
+        <p class="result {{ 'result--ok' if ok else 'result--error' }}">{{ message }}</p>
+      {% endif %}
+
+      <form class="login-form" method="post" action="{{ url_for('login') }}" autocomplete="off">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" required autofocus>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required>
+
+        <button type="submit">Log in</button>
+      </form>
+
+      <p class="back"><a href="{{ url_for('index') }}">Back to the demo home page</a></p>
+    </main>
+  </body>
+</html>

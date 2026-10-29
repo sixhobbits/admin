@@ -113,3 +113,126 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Login proof-of-concept page */
+
+.card--login {
+  width: min(520px, 100%);
+}
+
+.stamp {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 2px dashed #fb7185;
+  border-radius: 8px;
+  color: #fda4af;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  transform: rotate(-2deg);
+}
+
+.login-heading {
+  margin: 16px 0 0;
+  font-size: clamp(30px, 6vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.notice {
+  margin: 20px 0 24px;
+  padding: 14px 16px;
+  border-left: 3px solid #fbbf24;
+  border-radius: 0 10px 10px 0;
+  background: rgba(251, 191, 36, 0.08);
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.notice code {
+  color: #fde68a;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.result {
+  margin: 0 0 20px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.result--ok {
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  background: rgba(20, 184, 166, 0.12);
+  color: #99f6e4;
+}
+
+.result--error {
+  border: 1px solid rgba(251, 113, 133, 0.35);
+  background: rgba(251, 113, 133, 0.12);
+  color: #fecdd3;
+}
+
+.login-form {
+  display: grid;
+  gap: 8px;
+}
+
+.login-form label {
+  margin-top: 10px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 10px;
+  background: rgba(2, 6, 23, 0.6);
+  color: #f8fafc;
+  font: inherit;
+  font-size: 16px;
+}
+
+.login-form input:focus {
+  outline: 2px solid #2dd4bf;
+  outline-offset: 1px;
+}
+
+.login-form button {
+  margin-top: 18px;
+  padding: 13px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(120deg, #2dd4bf, #3b82f6);
+  color: #04121f;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  filter: brightness(1.08);
+}
+
+.back {
+  margin: 24px 0 0;
+  font-size: 14px;
+}
+
+.back a {
+  color: #5eead4;
+  text-decoration: none;
+}
+
+.back a:hover {
+  text-decoration: underline;
+}
